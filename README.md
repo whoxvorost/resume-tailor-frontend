@@ -1,32 +1,52 @@
-# React + TypeScript + Vite
+# Resume Tailor Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+AI-powered resume tailoring platform frontend built with React + TypeScript.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- Axios
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- User registration and login
+- Resume upload (PDF, DOCX)
+- ATS score analysis
+- AI-powered resume generation
+- Copy generated resume
 
-## Expanding the Oxlint configuration
+## Getting Started
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+```bash
+# Install dependencies
+npm install
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+# Start development server
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Open [http://localhost:5173](http://localhost:5173)
+
+## Project Structure
+src/
+
+├── api/
+
+│   └── resumeApi.ts    # API calls to backend
+
+├── pages/
+
+│   ├── LoginPage.tsx   # Login/Register page
+
+│   ├── HomePage.tsx    # Resume upload page
+
+│   └── AnalyzePage.tsx # ATS analysis page
+
+└── App.tsx             # Main app component
+
+## Backend
+
+This frontend connects to the Resume Tailor API.
+Make sure backend is running on http://localhost:8000
